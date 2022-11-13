@@ -1,3 +1,5 @@
+package selenide.tests;
+
 import data.CatalogMenuItems;
 import org.junit.Test;
 import page_object.CatalogPage;

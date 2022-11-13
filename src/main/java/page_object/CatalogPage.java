@@ -1,6 +1,7 @@
 package page_object;
 
 import org.openqa.selenium.By;
+import utils.CommonWebElementUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,15 +11,12 @@ import static com.codeborne.selenide.Selenide.$$;
 
 
 public class CatalogPage {
+    static CommonWebElementUtils collectElements = new CommonWebElementUtils();
+
     public static List<String> collectElementsFromPages(String itemsName) {
-        List<String> itemCatalog = new ArrayList<>();
-        $$(By.xpath(itemsName)).stream().forEach(webElement -> {
-            if (!webElement.getText().isEmpty()) {
-                itemCatalog.add(webElement.getText());
-            }
-        });
-        return itemCatalog;
+       return collectElements.getTextsFromWebElements($$(By.xpath(itemsName)));
     }
+
 
     private static final String CATALOG_PAGE_MENU_BAR_XPATH_PATTERN =
             "//span[@class='catalog-navigation-classifier__item-title-wrapper']";
@@ -64,10 +62,7 @@ public class CatalogPage {
         return collectElementsFromPages(ACCESSORIES_ITEMS_DESCRIPTION);
     }
 
-    public Boolean checkForEmpty(List<String> itemsCatalog) {
-        boolean isContains = itemsCatalog.contains("");
-        return isContains;
-    }
+
 
 
 }

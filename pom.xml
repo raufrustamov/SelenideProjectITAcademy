@@ -20,6 +20,8 @@
         <webDriverManager>5.3.0</webDriverManager>
         <selenide.version>6.9.0</selenide.version>
         <junit.version>4.13.2</junit.version>
+        <cucumber.version>7.8.1</cucumber.version>
+        <cucumber.junit.version>7.9.0</cucumber.junit.version>
     </properties>
 
     <dependencies>
@@ -53,11 +55,33 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${webDriverManager}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>7.9.0</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
