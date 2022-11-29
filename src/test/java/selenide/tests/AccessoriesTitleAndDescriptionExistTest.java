@@ -18,16 +18,10 @@ public class AccessoriesTitleAndDescriptionExistTest {
         return itemsCatalog.contains("");
     }
 
-    @Before
+/*    @Before
     public void setUp(){
-        String browser = System.getProperty("selenide.browser", "safari");
-        boolean headless = parseBoolean(System.getProperty("selenide.headless", "false"));
-
-        Configuration.browser = browser;
-        Configuration.headless = headless;
-        Configuration.screenshots = true;
-        Configuration.reportsFolder = "target";
-    }
+        SelenideConfig.browser("safari");
+    }*/
     @Test
     public void CheckForExistingDescriptionTest() {
 

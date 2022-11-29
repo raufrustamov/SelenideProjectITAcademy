@@ -13,7 +13,7 @@ import static page_object.Navigation.navigateToComputerAndNetworkSection;
 
 public class CatalogMenuCompAndNetSectionElExistTest {
     CatalogPage catalogPage = new CatalogPage();
-    @Before
+/*    @Before
     public void setUp(){
         String browser = System.getProperty("selenide.browser", "safari");
         boolean headless = parseBoolean(System.getProperty("selenide.headless", "false"));
@@ -22,7 +22,7 @@ public class CatalogMenuCompAndNetSectionElExistTest {
         Configuration.headless = headless;
         Configuration.screenshots = true;
         Configuration.reportsFolder = "target";
-    }
+    }*/
     @Test
     public void CheckForExistingItemsInComputerAndNetworkSectionTest() {
         navigateToComputerAndNetworkSection();

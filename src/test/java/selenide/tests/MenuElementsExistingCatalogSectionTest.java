@@ -12,7 +12,7 @@ import static page_object.Navigation.clickOnCatalogSection;
 
 public class MenuElementsExistingCatalogSectionTest {
     CatalogPage catalogPage = new CatalogPage();
-    @Before
+/*    @Before
     public void setUp(){
         String browser = System.getProperty("selenide.browser", "safari");
         boolean headless = parseBoolean(System.getProperty("selenide.headless", "false"));
@@ -21,7 +21,7 @@ public class MenuElementsExistingCatalogSectionTest {
         Configuration.headless = headless;
         Configuration.screenshots = true;
         Configuration.reportsFolder = "target";
-    }
+    }*/
 
     @Test
     public void CatalogElementsExistingTest() {
